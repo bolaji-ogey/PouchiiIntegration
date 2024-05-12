@@ -1,0 +1,82 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package org.pouchii2.integration.wallet.responses;
+
+/**
+ *
+ * @author BOLAJI-OGEYINGBO
+ */
+public class MyTrxnHistoryRespData {
+    
+    private  int  current_page =  1;
+    private  int  pages   =  1;
+    private  int  lastShowing =  1;
+    private  int  total_record_count =  1;
+    
+    private  long  currentLastRecord =  2584;
+    private  TraxnHistoryItem  contents  =  null;  // new TraxnHistoryItem();
+  
+        
+    public  int getCurrent_page(){
+        return  current_page;
+    }    
+    
+    public  int getPages(){
+        return  pages;
+    } 
+     
+    public  int getLastShowing(){
+        return  lastShowing;
+    } 
+      
+    public  int getTotal_record_count(){
+        return  total_record_count;
+    }
+    
+    
+    public  long  getCurrentLastRecord(){
+        return  currentLastRecord;
+    }
+    
+    
+    public  TraxnHistoryItem  getContents(){
+        return  contents;
+    }
+    
+    
+    
+    
+    
+    
+    public  void setCurrent_page(int inCurrent_page){
+           current_page = inCurrent_page;
+    }    
+    
+    public  void setPages(int inPages){
+           pages = inPages;
+    } 
+     
+    public  void setLastShowing(int inLastShowing){
+           lastShowing = inLastShowing;
+    } 
+      
+    public  void setTotal_record_count(int inTotal_record_count){
+           total_record_count = inTotal_record_count;
+    }
+    
+    
+    public  void  setCurrentLastRecord(long  inCurrentLastRecord){
+           currentLastRecord = inCurrentLastRecord;
+    }
+    
+    
+    public  void  setContents(TraxnHistoryItem   inTraxnHistoryItem){
+           contents = inTraxnHistoryItem;
+    }
+    
+    
+    
+    
+}
