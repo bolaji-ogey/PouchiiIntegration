@@ -8,6 +8,11 @@ package org.pouchii2.integration.merchant.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper; 
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import org.json.JSONObject;
@@ -18,14 +23,31 @@ import org.json.JSONObject;
  */
 public class MerchantPaymentInstruction  extends  PouchiiMerchRequestBase {
     
-    private  String  customerReference = "-";                                                                                                                                                 
+    @NotBlank(message = "Customer reference cannot be null or empty")
+    private  String  customerReference = "-";    
+    
+    @NotBlank(message = "Beneficiary account name cannot be null or empty")
     private  String  beneficiaryAccountName = "-";
+    
+    @NotBlank(message = "Beneficiary account cannot be null or empty")  @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Beneficiary account must be ten (10) digits")
     private  String  beneficiaryAccountNumber = "_";
+    
+    @NotBlank(message = "Beneficiary bank code cannot be null or empty")   @Pattern(regexp="[0-9]")
+    @Size(min=3,  max=5, message="Beneficiary bank code must be either three (3) or five (5) digits")
     private  String  beneficiaryBankCode = "_";
+    
     private  String  narration = "-";
+    
+    @NotBlank(message = "Trxn request reference cannot be null or empty")
     private  String  trxnRequestReference = "_";
     
+    @NotBlank(message = "Credit currency cannot be null or empty")
+    @Size(min=3,  max=3, message="Credit currency must be three (3) letter code")
     private  String  creditCurrency = "NGN"; 
+    
+    @Positive(message = "Trxn amount must be a positive number")    
+    @Digits(integer = 8, fraction = 2, message = "Trxn amount must consist of digit value only")
     private  String  trxnAmount = "0.00";
      
    

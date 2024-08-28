@@ -8,6 +8,9 @@ package i.ogeyingbo.single.node.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper; 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import java.sql.Connection;
 import org.json.JSONObject;
 
@@ -20,7 +23,12 @@ public class AcceptOrRejectRequestMoney    extends  RequestBase  {
     private  long  requestMoneyId = -1; 
     private  boolean  requestMoneyStatus = true; 
     private  boolean  cancelRequest = false; 
-    private  String  reason = "-"; 
+    
+    @NotBlank(message = "Reason cannot be null or empty")
+    private  String  reason = "-";
+    
+    @NotBlank(message = "Transaction PIN cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Transaction PIN must be four (4) digits")
     private  String  trxnPin = "-";  
     
        

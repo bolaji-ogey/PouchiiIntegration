@@ -8,6 +8,9 @@ package i.ogeyingbo.single.node.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import java.sql.Connection;
 import org.json.JSONObject;
 
@@ -17,12 +20,26 @@ import org.json.JSONObject;
  */
 public class DynamicKYCLevel3Upgrade    extends   RequestBase   {
           
+    @NotBlank(message = "BVN cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=11,  max=11, message="bvn must be eleven (11) digits")
     private  String  bvn = "_";
+    
+    @NotBlank(message = "ID type cannot be null or empty")
     private  String  idType = "NIN";
+    
+    @NotBlank(message = "KYC3 Document type cannot be null or empty") 
     private  String  kyc3DocumentType = "Electricity_Bill"; 
+    
+    @NotBlank(message = "KYC3 Document number cannot be null or empty") @Pattern(regexp="[0-9]")
     private  String  kyc3DocumentNumber = "09087654";
+    
+    @NotBlank(message = "KYC3 Document file cannot be null or empty")
     private  String  kyc3DocumentFile = "https://localhost:8080/nin/leke.png";
-    private  String  kyc3DocumentContentType = "image/jpg";     
+    
+    @NotBlank(message = "KYC3 Document content type cannot be null or empty")
+    private  String  kyc3DocumentContentType = "image/jpg"; 
+
+    @NotBlank(message = "KYC3 Document issue date cannot be null or empty") @Pattern(regexp="[-0-9]")    
     private  String  kyc3DocumentIssuedDate = "2021-03-14"; 
      
      

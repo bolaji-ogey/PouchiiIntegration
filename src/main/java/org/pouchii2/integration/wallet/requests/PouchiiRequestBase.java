@@ -5,8 +5,10 @@
 package org.pouchii2.integration.wallet.requests;
 
  
+import jakarta.validation.constraints.NotBlank;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import javax.validation.constraints.Pattern;
 
 /**
  *
@@ -14,13 +16,24 @@ import java.sql.PreparedStatement;
  */
 public class PouchiiRequestBase {
      
+    @NotBlank(message = "Request channel ID cannot be null or empty") 
     private  String  requestChannelId = "-";
-    private  String  requestChannel = "API";
-    private  String  requestChannelType = "Integrator";
-    private  String  requestApplicationCode = "-";
-    private  String  requestApplicationModule = "INTEGRATOR";
-    private  String  requestPartnerCode = "-"; 
     
+    @NotBlank(message = "Request channel cannot be null or empty") 
+    private  String  requestChannel = "API";
+    
+    @NotBlank(message = "Request channel type cannot be null or empty") 
+    private  String  requestChannelType = "Integrator";
+    
+    @NotBlank(message = "Request application code cannot be null or empty") 
+    private  String  requestApplicationCode = "-";
+    
+    @NotBlank(message = "Request application module cannot be null or empty") 
+    private  String  requestApplicationModule = "INTEGRATOR";
+    
+    @NotBlank(message = "Request partner code cannot be null or empty")
+    private  String  requestPartnerCode = "-"; 
+     
     private  String  customerReference = ""; 
     
     

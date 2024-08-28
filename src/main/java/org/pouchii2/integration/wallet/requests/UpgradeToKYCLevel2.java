@@ -8,6 +8,9 @@ package org.pouchii2.integration.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
  
 import org.json.JSONObject;
 
@@ -17,12 +20,23 @@ import org.json.JSONObject;
  */
 public class UpgradeToKYCLevel2  extends  PouchiiRequestBase {
     
-     
+     @NotBlank(message = "BVN cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=11,  max=11, message="bvn must be eleven (11) digits")
     private  String  bvn = "_";
+     
+     @NotBlank(message = "ID type cannot be null or empty")
     private  String  idType = "NIN";
+     
+    @NotBlank(message = "Document number cannot be null or empty") @Pattern(regexp="[0-9]")
     private  String  documentNumber = "09087654";
+    
+    @NotBlank(message = "Document file cannot be null or empty")
     private  String  documentFile = "https://localhost:8080/nin/leke.png";
+    
+    
+   @NotBlank(message = "Document content type cannot be null or empty")
     private  String  documentContentType = "image/jpg"; 
+ 
     
      
     

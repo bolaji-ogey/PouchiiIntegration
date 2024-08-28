@@ -8,6 +8,11 @@ package i.ogeyingbo.single.node.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,10 +24,23 @@ import org.json.JSONObject;
  */
 public class RequestMoney  extends   RequestBase {
        
+    @NotBlank(message = "Currency cannot be null or empty")
+    @Size(min=3,  max=3, message="Currency must be three (3) letter code")
     private  String  currency = "-"; 
+    
+     @Positive(message = "Request amount must be a positive number")    
+    @Digits(integer = 8, fraction = 2, message = "Request amount must consist of digit value only")
     private  BigDecimal  requestAmount = new BigDecimal(0.00); 
-    private  String  beneficiaryWallet = "-"; 
+    
+    @NotBlank(message = "Recipient wallet cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Recipient wallet must be ten (10) digits")
+    private  String  recipientWallet = "-"; 
+    
+    @NotBlank(message = "Source wallet number cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Source wallet number must be ten (10) digits")
     private  String  sourceWalletNumber = "-"; 
+    
+    @NotBlank(message = "Reason cannot be null or empty")
     private  String  reason = "Request Money"; 
    
      
@@ -102,8 +120,8 @@ public class RequestMoney  extends   RequestBase {
         return  requestAmount;
     }
     
-    public  String  getBeneficiaryWallet(){
-        return  beneficiaryWallet;
+    public  String  getRecipientWallet(){
+        return  recipientWallet;
     }
     
     public  String  getSourceWalletNumber(){
@@ -128,8 +146,8 @@ public class RequestMoney  extends   RequestBase {
            requestAmount = inRequestAmount;
     }
     
-    public  void  setBeneficiaryWallet(String  inBeneficiaryWallet){
-           beneficiaryWallet = inBeneficiaryWallet;
+    public  void  setRecipientWallet(String  inRecipientWallet){
+          recipientWallet = inRecipientWallet;
     }
     
     public  void  setSourceWalletNumber(String  inSourceWalletNumber){

@@ -8,6 +8,8 @@ package i.ogeyingbo.single.node.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper; 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import java.sql.Connection;
 import org.json.JSONObject;
 
@@ -16,7 +18,9 @@ import org.json.JSONObject;
  * @author BOLAJI-OGEYINGBO
  */
 public class GetCustomerWallets    extends   RequestBase   {
-          
+      
+     @NotBlank(message = "Currency cannot be null or empty")
+    @Size(min=3,  max=3, message="Currency must be three (3) letter code")    
     private  String  currency = "NGN";
      
     
@@ -98,8 +102,6 @@ public class GetCustomerWallets    extends   RequestBase   {
     
     
     
-    public  static void  main(String[] argd){
-        System.out.println(new GetCustomerWallets().convertToJSONString());
-    }
+   
     
 }

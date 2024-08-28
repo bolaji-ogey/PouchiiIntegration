@@ -4,10 +4,15 @@
  */
 package org.pouchii2.integration.wallet.responses;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import java.util.ArrayList;
+
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"responseCode", "responseMessage", "responseTime",   "current_page",  "pages",
+                       "lastShowing", "total_record_count",   "currentLastRecord", "contents"})
 public class MyTrxnHistoryRespData {
     
     private  int  current_page =  1;
@@ -16,7 +21,7 @@ public class MyTrxnHistoryRespData {
     private  int  total_record_count =  1;
     
     private  long  currentLastRecord =  2584;
-    private  TraxnHistoryItem  contents  =  null;  // new TraxnHistoryItem();
+    private  java.util.ArrayList<TraxnHistoryItem>  contents  =  new java.util.ArrayList<>();
   
         
     public  int getCurrent_page(){
@@ -41,7 +46,7 @@ public class MyTrxnHistoryRespData {
     }
     
     
-    public  TraxnHistoryItem  getContents(){
+    public  ArrayList<TraxnHistoryItem>  getContents(){
         return  contents;
     }
     
@@ -72,8 +77,8 @@ public class MyTrxnHistoryRespData {
     }
     
     
-    public  void  setContents(TraxnHistoryItem   inTraxnHistoryItem){
-           contents = inTraxnHistoryItem;
+    public  void  setContents(ArrayList<TraxnHistoryItem>   inTraxnHistoryItems){
+           contents = inTraxnHistoryItems;
     }
     
     

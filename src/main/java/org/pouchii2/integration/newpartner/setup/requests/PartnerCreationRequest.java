@@ -16,7 +16,7 @@ import org.json.JSONObject;
  */
 public class PartnerCreationRequest  extends   PouchiiAdminRequestBase {
     
-    private  String  partnerName = "HACK-5";
+    private  String  partnerName = "HACK-IN";
     private  String  partnerCode = "HACK-5";
     private  String  avatar = "Male";
     private  String  partnerIntegrationType = "Api";

@@ -5,6 +5,7 @@
 package i.ogeyingbo.my.common.lenders.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.math.BigDecimal;
@@ -14,6 +15,8 @@ import java.sql.Connection;
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"responseCode", "responseMessage", "loanRequestReference",   "loanRequestAmount",
+                          "loanType", "loanStatus", "loanStatusReason"})
 public class LoanApplStatusEnquiryResponse {
     
     private  int responseCode  = 400;

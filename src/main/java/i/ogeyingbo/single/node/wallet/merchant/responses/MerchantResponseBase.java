@@ -5,13 +5,9 @@
 package i.ogeyingbo.single.node.wallet.merchant.responses;
  
 
-import i.ogeyingbo.single.node.wallet.merchant.responses.base.*;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import org.json.JSONObject; 
 
 import  i.ogeyingbo.single.node.wallet.merchant.requests.MerchantRequestBase;
 
@@ -19,6 +15,10 @@ import  i.ogeyingbo.single.node.wallet.merchant.requests.MerchantRequestBase;
  *
  * @author BOLAJI-OGEYINGBO
  */
+
+@JsonPropertyOrder({"responseCode", "responseMessage", "requiredLogout",   "requireLogin",
+                          "requireRefreshToken", "requiredPasswordChange", "requiredVerification",
+                             "requiredPinCreation", "responseTime"})
 public class MerchantResponseBase  extends  MerchantRequestBase {
     
     private  int  responseCode = 401;

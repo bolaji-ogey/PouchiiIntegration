@@ -4,10 +4,16 @@
  */
 package org.pouchii2.integration.wallet.responses;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"responseCode", "responseMessage", "requiredLogout",   "requireLogin",
+                          "requireRefreshToken", "requiredPasswordChange", "requiredVerification",
+                             "requiredPinCreation", "responseTime"})
+ 
 public class SendMoneyToWalletRespData {
     
      private  long   transactionId  = -1;

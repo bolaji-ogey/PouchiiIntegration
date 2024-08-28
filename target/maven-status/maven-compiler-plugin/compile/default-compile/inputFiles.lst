@@ -47,6 +47,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\java\pouchiiintegration\Scho
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\CheckPartnerAvailabilityStatusResponse.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchAirtimeProviders.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\responses\MyTrxnHistoryRespData.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\ReleaseFundLockRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\loan\services\requests\PartnerIntAuthentication.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\test\wrong\data\WalletWrongTestData.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\TrxnVerificationRequest.java
@@ -92,6 +93,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\callback\url\Cust
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\requests\LoanApplicationModificationReq.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\merchant\requests\ProcessMerchBulkDisbursement.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\LoanSummaryCalculationResponse.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\ValidatePaymentRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\approval\workflow\ApprovalUserGroup.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\requests\FormData1.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\AirtimePurchase.java
@@ -130,10 +132,12 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\FetchMyTrxnHistory.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\backup\CreateNewMerchantWallet.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchGoTVBouquets.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchWalletByIDAndCustRef.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\core\WalletCoreDBUtils.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\swift\wallet\core\CoreTrxnEngine.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\java\pouchiiintegration\BillerServiceCaller.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\Fees.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\LockFundRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\ChangeMerchantAuthPin.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\core\ServiceUptimeWatch.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\FetchCustWalletBeneficiaries.java
@@ -195,6 +199,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpa
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\superadmin\user\setup\requests\StandardUserRegistration.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpartner\setup\requests\PouchiiAdminRequestBase.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpartner\setup\responses\PartnerCreationResponseData.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\ValidatePaymentRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\GenerateWalletQRCode.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\CreateMerchSecurityQuestion.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\testgroup\AuthourizationTestData.java
@@ -218,6 +223,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\test\correct\data\WalletTestData.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\merchant\responses\Currency.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchMyDataBeneficiaries.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\BalanceEnquiryByCustReference_1.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\loan\services\requests\SearchCustomerLoanApplications.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\test\wrong\data\RegistrationWrongTestData.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\TrxnDetailsRequest.java
@@ -303,6 +309,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\callback\url\LenderLoanAppNotifyProc.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\requests\LoanApplStatusEnquiryReq.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\AuthourizationResponse.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\CancelFundLockRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\loan\mgmt\network\PartnerLoanTenure.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\ussd\generic\service\USSDMenuItem.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\FetchMyElectricityBeneficiaries.java
@@ -350,6 +357,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\test\data\BillerTestData.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\loan\mgmt\network\LoanDBUtils.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\RequestMoney.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\CancelFundLockRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMyProfile.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\core\PendingNodeCredit.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchMyGoTvBeneficiaries.java
@@ -388,6 +396,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMySecurityQuestFlow.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\ViewMyWalletQRCode.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchBulkDisbursementUpload.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchLockRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\NullableFeesTest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\DirectDebitActivatnNotifyResponse.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\responses\MerchantResponseBase.java
@@ -420,6 +429,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpa
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\responses\Currency.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\ussd\generic\service\USSDServiceConfig.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\FetchMyAirtimeBeneficiaries.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\LockFundRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\core\utils\DBUtils.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\java\pouchiiintegration\AuthourizationCallerTest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\merchant\requests\RefreshMerchAuthToken.java
@@ -458,6 +468,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\merch
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\wallet\httpservice\model\RequestEventProcessorService.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\testgroup\LiveAuthourizationInterface.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpartner\setup\responses\UpdatePartnerInfoResponseData.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\ReleaseFundLockRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\TrxnVerificationRequest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\java\pouchiiintegration\AdvertCaller.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\open\api\test\ProfileTest.java

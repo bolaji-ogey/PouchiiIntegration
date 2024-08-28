@@ -8,6 +8,11 @@ package i.ogeyingbo.single.node.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper; 
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,19 +24,43 @@ import org.json.JSONObject;
  */
 public class SendMoneyToBank  extends   RequestBase {
           
+    @Positive(message = "Trxn amount must be a positive number")    
+    @Digits(integer = 8, fraction = 2, message = "Trxn amount must consist of digit value only")
     private  BigDecimal  trxnAmount = new BigDecimal(0.00);
+    
     private  String  narration = "-";
-    private  String  currency = "-";
+    
+    @NotBlank(message = "Currency cannot be null or empty")
+    @Size(min=3,  max=3, message="Currency must be three (3) letter code")
+    private  String  currency = "NGN";
+    
+    @NotBlank(message = "Source account cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Source account must be ten (10) digits")
     private  String  sourceAccount = "-";
-    private  String  sourceAccountType = "-";
+    
+    @NotBlank(message = "Source account type cannot be null or empty")
+    private  final String  sourceAccountType = "Wallet";
+    
     private  boolean  saveBeneficiary = true;
      
-    private  String  beneficiaryAccount = "-";
-    private  String  beneficiaryAccountName = "-";
-    private  String  beneficiaryBankCode = "-";  // Bankcode or Wallet
-    private  String  beneficiaryAccountType = "Bank";  
+    @NotBlank(message = "Recipient account cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Beneficiary account must be ten (10) digits")
+    private  String  recipientAccount = "-";
+    
+    @NotBlank(message = "Recipient account name cannot be null or empty")
+    private  String  recipientAccountName = "-";
+    
+    @NotBlank(message = "Recipient bank code cannot be null or empty")   @Pattern(regexp="[0-9]")
+    @Size(min=3,  max=5, message="Recipient bank code must be either three (3) or five (5) digits")
+    private  String  recipientBankCode = "-";  // Bankcode or Wallet
+    
+    @NotBlank(message = "Recipient account type cannot be null or empty")
+    private final String  recipientAccountType = "Bank";  
   
+    @NotBlank(message = "Transaction PIN cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Transaction PIN must be four (4) digits")
     private  String  trxnPin = "1234";  
+    
     private  boolean  chargeMyBonusWallet = false;  
     private  BigDecimal  amountChargedFromBonusWallet = new BigDecimal(0.00); 
      
@@ -135,20 +164,20 @@ public class SendMoneyToBank  extends   RequestBase {
      
   
     
-    public  String  getBeneficiaryAccount(){
-        return  beneficiaryAccount;
+    public  String  getRecipientAccount(){
+        return  recipientAccount;
     }
     
-    public  String  getBeneficiaryAccountName(){
-        return  beneficiaryAccountName;
+    public  String  getRecipientAccountName(){
+        return  recipientAccountName;
     }
     
-    public  String  getBeneficiaryBankCode(){
-        return  beneficiaryBankCode;
+    public  String  getRecipientBankCode(){
+        return  recipientBankCode;
     }
     
-    public  String  getBeneficiaryAccountType(){
-        return  beneficiaryAccountType;
+    public  String  getRecipientAccountType(){
+        return   recipientAccountType;
     }
     
     
@@ -188,31 +217,34 @@ public class SendMoneyToBank  extends   RequestBase {
            sourceAccount = inSourceAccount;
     }
     
+    /***
     public  void  setSourceAccountType(String  inSourceAccountType){
            sourceAccountType = inSourceAccountType;
     }
+    ****/
     
     public  void  setSaveBeneficiary(boolean  inSaveBeneficiary){
            saveBeneficiary = inSaveBeneficiary;
     }
       
     
-    public  void  setBeneficiaryAccount(String  inBeneficiaryAccount){
-           beneficiaryAccount = inBeneficiaryAccount;
+    public  void  setRecipientAccount(String  inRecipientAccount){
+           recipientAccount = inRecipientAccount;
     }
     
-    public  void  setBeneficiaryAccountName(String  inBeneficiaryAccountName){
-           beneficiaryAccountName = inBeneficiaryAccountName;
+    public  void  setRecipientAccountName(String  inRecipientAccountName){
+           recipientAccountName = inRecipientAccountName;
     }
     
-    public  void  setBeneficiaryBankCode(String  inBeneficiaryBankCode){
-           beneficiaryBankCode = inBeneficiaryBankCode;
+    public  void  setRecipientBankCode(String  inRecipientBankCode){
+           recipientBankCode = inRecipientBankCode;
     }
     
-    public  void  setBeneficiaryAccountType(String  inBeneficiaryAccountType){
-           beneficiaryAccountType = inBeneficiaryAccountType;
+    /**
+    public  void  setRecipientAccountType(String  inRecipientAccountType){
+           recipientAccountType = inRecipientAccountType;
     }
-    
+    ***/
     
     public  void  setTrxnPin(String  inTrxnPin){
            trxnPin = inTrxnPin;

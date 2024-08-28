@@ -7,6 +7,8 @@ package org.pouchii2.integration.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import org.json.JSONObject;
 
 /**
@@ -16,10 +18,19 @@ import org.json.JSONObject;
 public class UpgradeToKYCLevel3 extends  PouchiiRequestBase  {
     
         
+    @NotBlank(message = "Document type cannot be null or empty")    
     private  String  kycDocumentType = "Electricity_Bill"; 
+    
+    @NotBlank(message = "Document number cannot be null or empty") @Pattern(regexp="[0-9]")
     private  String  documentNumber = "09087654";
+    
+    @NotBlank(message = "Document file cannot be null or empty")
     private  String  documentFile = "https://localhost:8080/nin/leke.png";
-    private  String  documentContentType = "image/jpg";     
+    
+    @NotBlank(message = "Document content type cannot be null or empty")
+    private  String  documentContentType = "image/jpg"; 
+
+    @NotBlank(message = "Document issue date cannot be null or empty") @Pattern(regexp="[-0-9]")    
     private  String  issuedDate = "2021-03-14"; 
     
      

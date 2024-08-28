@@ -5,15 +5,16 @@
 package i.ogeyingbo.my.common.lenders.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import i.ogeyingbo.single.node.superadmin.setup.requests.StandardUserRegistration;
 import java.sql.Connection;
 
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"responseCode", "responseMessage", "data"})
 public class AuthourizationResponse {
     
     private  int responseCode  = 400;

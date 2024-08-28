@@ -7,6 +7,9 @@ package i.ogeyingbo.single.node.wallet.merchant.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper; 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import org.json.JSONObject;
@@ -22,7 +25,11 @@ public class MerchantPaymentDisbursement   extends  MerchantRequestBase {
     private  String  sourceAccount = "-";
     private final  String  sourceAccountType = "Wallet";
     private  String  trxnReference = "-"; 
-    private  String  trxnPin = "-"; 
+    
+    @NotBlank(message = "Transaction PIN be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Transaction PIN must be four (4) digits")
+    private  String  trxnPin; 
+    
     private  String  beneficiaryAccount = "-";
     private  String  beneficiaryBankName = "-";
     private  String  beneficiaryBankCode = "-";

@@ -4,10 +4,13 @@
  */
 package i.ogeyingbo.my.common.lenders.api.responses;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"token", "expiredAt", "type"})
 public class ResponseData {
     
     private String  token = "";

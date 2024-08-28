@@ -8,6 +8,11 @@ package org.pouchii2.integration.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.validation.constraints.Digits;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import org.json.JSONObject;
@@ -18,19 +23,44 @@ import org.json.JSONObject;
  */
 public class ElectricityPaymentRequest    extends  PouchiiRequestBase  {
                   
+    @Positive(message = "Wallet ID must be a positive number")    
+    @Digits(integer = 8, fraction = 0, message = "Wallet ID must consist of digit value only")
     private  long  walletId = -1;
+    
+   //  @Size(min=11,  max=11, message="Customer ID must be Eleven (11) digits")
+    @NotBlank(message = "Customer ID cannot be null or empty") @Pattern(regexp="[0-9]")   
     private  String  customerId = "09159187488";
+     
+    @NotBlank(message = "Biller name cannot be null or empty")
     private  String  billerName = "Integrator";
+    
+    @NotBlank(message = "Biller code cannot be null or empty")
     private  String  billerCode = "-";
-    private  int     billerId = 16;
-    private  BigDecimal  paymentAmount = new BigDecimal(0.00); 
+    
+    @Positive(message = "Biller ID must be a positive number")    
+    @Digits(integer = 3, fraction = 0, message = "Biller ID must consist of digit value only")
+    private  long     billerId = 16;
+    
+    @Positive(message = "Payment amount must be a positive number")    
+    @Digits(integer = 8, fraction = 2, message = "Payment amount must consist of digit value only")
+    private  BigDecimal  paymentAmount = new BigDecimal(0.00);
     
     private  boolean  paymentWithBonus = false;
-     private  BigDecimal  payWithBonusAmount = new BigDecimal(0.00); 
+    private  BigDecimal  payWithBonusAmount = new BigDecimal(0.00); 
+     
+    @NotBlank(message = "Currency cannot be null or empty")
+    @Size(min=3,  max=3, message="Currency must be three (3) letter code")
     private  String  currency = "NGN";
+    
+    @NotBlank(message = "Transaction PIN cannot be null or empty") @Pattern(regexp="[0-9]")
+    @Size(min=4,  max=4, message="Transaction PIN must be four (4) digits")
     private  String  trxnPin = "1234"; 
+    
+    
     private  boolean  saveBeneficiary = true;
     private  String  saveBeneficiaryName = "";
+    
+    @NotBlank(message = "Transaction reference cannot be null or empty")
     private  String  trxnReference = "";
     
     private  String  notificationEmail = "";

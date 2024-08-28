@@ -4,11 +4,14 @@
  */
 package org.pouchii2.integration.wallet.responses;
  
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"name", "code", "symbol"}) 
 public class Currency {
     
     private  String  name  =  "";

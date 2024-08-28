@@ -41,7 +41,7 @@ public class WalletCallerTest  extends  GenericCaller  {
     
       
       
-        
+     /***   
       public   JSONObject   testAuthenticateCall(final  JSONObject    testData){
         return   walletCaller.callAuthenticate(testData);
      }
@@ -53,15 +53,17 @@ public class WalletCallerTest  extends  GenericCaller  {
     
     
     
-  //  private  JSONObject   testSendMoneyToBankBulkCall(){
-  //    return   walletCaller.callSendMoneyToBankBulk(WalletTestData.getSendMoneyBulkTestData());                 
-  //  }
+     private  JSONObject   testSendMoneyToBankBulkCall(){
+       return   walletCaller.callSendMoneyToBankBulk(WalletTestData.getSendMoneyBulkTestData());                 
+     }
     
      
     public  JSONObject   testSendMoneyToBankCall(){ 
       return   walletCaller.callSendMoneyToBank(WalletTestData.getSendMoneyToBankData());  
    }
-    
+    ***/
+      
+      
      
     public  JSONObject   testRequestMoneyCall(){
        return  walletCaller.callRequestMoney(WalletTestData.getRequestMoneyTestData()); 
@@ -72,11 +74,11 @@ public class WalletCallerTest  extends  GenericCaller  {
         return  walletCaller.callRetrieveNubanNumber(walletCaller.PROFILE_PHONE_NUMBER); 
      }
      
-    
+  /***  
     public  JSONObject   testRetrieveNubanNumberBySchemeCall(){ 
        return    walletCaller.callRetrieveNubanNumberByScheme(walletCaller.PROFILE_PHONE_NUMBER, walletCaller.SCHEME);        
    }
-    
+    ***/
      
      public  JSONObject   testGetCustomerWalletsCall(){
         return  walletCaller.getCustomerWallets(); 
@@ -89,10 +91,11 @@ public class WalletCallerTest  extends  GenericCaller  {
    }
    
     
+   /****
     public  JSONObject   testGetWalletTrxnsCall(){
           return   walletCaller.getWalletTrxns(); 
    }
-    
+    ****/
      
     
     public  JSONObject    testGetWalletAccountStatementCall(){
@@ -110,11 +113,11 @@ public class WalletCallerTest  extends  GenericCaller  {
          return   walletCaller.getUserBeneficiarys(walletCaller.PROFILE_PHONE_NUMBER); 
    }
      
-        
+   /**     
   public  JSONObject   testDeleteUserBeneficiaryCall(){
       return  walletCaller.callDeleteUserBeneficiary(walletCaller.BENEFICIARY_ID); 
    }
-      
+    ***/  
        
     public  JSONObject  testGetAllCommercialBanksCall(){ 
         return  walletCaller.getAllCommercialBanks();  

@@ -4,10 +4,20 @@
  */
 package org.pouchii2.integration.wallet.responses;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"transactionId", "transactionReference", "processorReference",   "transactionEvent",
+                      "transactionType",  "transactionMode", "transactionModeDescription", "currency",
+                         ""})
+//@Getter @Setter @NoArgsConstructor  
+@Entity
+@Table(name="trxn_history_item")
 public class TraxnHistoryItem {
       
     private  long   transactionId  = -1;

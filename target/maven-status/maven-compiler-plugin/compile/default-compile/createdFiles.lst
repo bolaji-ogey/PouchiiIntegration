@@ -17,6 +17,7 @@ i\ogeyingbo\single\node\wallet\merchant\requests\MerchantLogOut.class
 i\ogeyingbo\core\utils\AESUtil.class
 org\pouchii2\integration\merchant\requests\MyMerchReqMoneyNotifications.class
 org\monicenta\lenders\api\RepaymentInfo.class
+org\pouchii2\integration\wallet\requests\FetchLockRequest.class
 i\ogeyingbo\testgroup\RegistrationWrongTestData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\ChangeMerchSecurityQuest.class
 i\ogeyingbo\ussd\generic\service\USSDServiceConfig.class
@@ -128,6 +129,7 @@ org\pouchii2\integration\merchant\requests\MerchFetchMyProfile.class
 i\ogeyingbo\my\common\lenders\api\requests\TrxnFee.class
 i\ogeyingbo\single\node\wallet\merchant\requests\CreateNewMerchantWallet.class
 org\pouchii2\integration\newpartner\setup\responses\FetchMerchantCredentialResponse.class
+i\ogeyingbo\single\node\wallet\requests\ReleaseFundLockRequest.class
 i\ogeyingbo\my\common\lenders\api\responses\Fees.class
 i\ogeyingbo\single\node\wallet\merchant\requests\GetMerchSecurityByMerchId.class
 i\java\pouchiiintegration\BillerServiceCaller.class
@@ -199,6 +201,7 @@ org\pouchii2\partner\test\wrong\data\WalletWrongTestData.class
 org\pouchii2\callback\url\LoanDocument.class
 i\ogeyingbo\my\common\approval\workflow\WorkFlowUtils.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\requests\AdminUserLogin.class
+org\pouchii2\integration\wallet\requests\ReleaseFundLockRequest.class
 i\ogeyingbo\single\node\wallet\core\PendingNodeCredit.class
 i\ogeyingbo\testgroup\BillerWrongTestData.class
 i\ogeyingbo\single\node\wallet\core\WalletDebitHistory.class
@@ -277,10 +280,12 @@ org\pouchii2\partner\test\data\ProfileTestData.class
 i\ogeyingbo\single\node\swift\wallet\core\CustomPool$ResultEntity.class
 org\pouchii2\integration\wallet\requests\FetchReqMoneyNotifications.class
 org\pouchii2\integration\newpartner\setup\responses\AdminUserLoginResp.class
+i\ogeyingbo\single\node\wallet\requests\BalanceEnquiryByCustReference_1.class
 i\ogeyingbo\my\common\loan\mgmt\network\PartnerLoanType.class
 org\pouchii2\integration\open\api\ProfileCaller.class
 org\pouchii2\partner\integration\AdvertCaller.class
 i\ogeyingbo\single\node\wallet\requests\TrxnVerificationRequest.class
+org\pouchii2\integration\wallet\requests\ValidatePaymentRequest.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MyMerchReqMoneyNotifications.class
 org\pouchii2\integration\wallet\responses\MyTrxnHistoryRespData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\ReProcessMerchBulkDisbursement.class
@@ -290,6 +295,7 @@ org\pouchii2\partner\integration\using\jsonobjects\WalletCallerTest.class
 org\pouchii2\integration\merchant\requests\base\PouchiiMerchRequestBase.class
 org\pouchii2\callback\url\CallBackResultData.class
 org\pouchii2\integration\newpartner\setup\responses\InitializePartnerWalletResponse.class
+org\pouchii2\integration\wallet\requests\LockFundRequest.class
 org\pouchii2\partner\test\correct\data\BillerTestData.class
 org\pouchii2\integration\merchant\requests\MerchFetchMyBilkDisbursementTrxn.class
 i\ogeyingbo\my\common\approval\workflow\RequestItemBatch.class
@@ -318,10 +324,12 @@ i\ogeyingbo\single\node\wallet\requests\SendMoneyToBank.class
 i\ogeyingbo\my\common\lenders\api\responses\AuthourizationResponse.class
 i\ogeyingbo\single\node\wallet\requests\UpgradeToKYCLevel3.class
 i\ogeyingbo\single\node\swift\wallet\core\SingleNodeTrxnEngine.class
+org\pouchii2\integration\wallet\requests\CancelFundLockRequest.class
 i\ogeyingbo\core\utils\AsynchronousEcho.class
 org\pouchii2\integration\open\api\WalletCaller.class
 i\ogeyingbo\my\common\lenders\api\responses\LoanRepaymentNotifyReponse.class
 i\ogeyingbo\process\old\excel\example\codes\OldFormatRead.class
+org\pouchii2\integration\wallet\requests\FetchWalletByIDAndCustRef.class
 i\ogeyingbo\my\common\approval\workflow\CustomPool.class
 org\pouchii2\integration\merchant\responses\MerchantIntAuthRespData.class
 i\ogeyingbo\ussd\generic\service\CustomPool.class
@@ -348,6 +356,7 @@ i\ogeyingbo\ussd\generic\service\USSDService.class
 org\pouchii2\integration\newpartner\setup\requests\InitializePartnerWallet.class
 i\ogeyingbo\testgroup\AuthourizationLiveData.class
 i\ogeyingbo\core\utils\BankType.class
+i\ogeyingbo\single\node\wallet\requests\ValidatePaymentRequest.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\RefreshMerchAuthToken.class
 vertx\eventbus\example\SenderVerticle.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchantRequestBase.class
@@ -377,6 +386,7 @@ i\ogeyingbo\single\node\wallet\merchant\requests\backup\ChangeMerchantAuthPin.cl
 org\pouchii2\integration\newpartner\setup\requests\UpdatePartnerInfoRequest.class
 i\ogeyingbo\my\common\approval\workflow\ApprovalItemType.class
 org\pouchii2\integration\wallet\requests\CableTVPaymentRequest.class
+i\ogeyingbo\single\node\wallet\requests\CancelFundLockRequest.class
 i\ogeyingbo\my\common\loan\services\requests\LoanPartnerSupportedLoanProd.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchantPaymentDisbursement.class
 i\ogeyingbo\ussd\generic\service\USSDMenu.class
@@ -484,6 +494,7 @@ i\ogeyingbo\my\common\loan\services\requests\CreatePartnerProducts.class
 org\pouchii2\integration\merchant\requests\PouchiiMerchRequestBase.class
 org\pouchii2\integration\wallet\requests\RequestMoney.class
 i\ogeyingbo\my\common\loan\services\requests\SearchCustomerLoanApplications.class
+i\ogeyingbo\single\node\wallet\requests\LockFundRequest.class
 i\ogeyingbo\my\common\lenders\api\requests\ApplicationForm.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\CreateNewMerchantWallet.class
 i\ogeyingbo\my\common\loan\services\requests\LoanRepaymentStatusEnquiry.class
