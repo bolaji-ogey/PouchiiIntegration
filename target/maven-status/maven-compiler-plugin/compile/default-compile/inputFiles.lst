@@ -122,6 +122,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\integration\BillerServiceCaller.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\core\utils\VertxEcho.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\ProcessMerchBulkDisbursement.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\enterprise\trxn\entities\AbstractEntity.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\vertx\eventbus\example\SenderVerticle.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\integration\using\jsonobjects\LoanInsuranceCaller.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpartner\setup\requests\STSLApplication.java
@@ -200,6 +201,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\superadmin\user\s
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpartner\setup\requests\PouchiiAdminRequestBase.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\newpartner\setup\responses\PartnerCreationResponseData.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\ValidatePaymentRequest.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\enterprise\trxn\entities\TransactionHistory.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\requests\GenerateWalletQRCode.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\CreateMerchSecurityQuestion.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\testgroup\AuthourizationTestData.java
@@ -230,6 +232,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\lenders\api\responses\LoanApplStatusEnquiryResponse.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchCustWalletBeneficiaries.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\vertx\eventbus\example\ReceiverVerticle.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\enterprise\trxn\entities\Journal.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\callback\url\TransactionFee.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\open\api\test\BillerTest.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\approval\workflow\ApprovalItemType.java
@@ -358,6 +361,7 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\partner\test\data
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\loan\mgmt\network\LoanDBUtils.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\RequestMoney.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\CancelFundLockRequest.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\enterprise\trxn\entities\JournalLine.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMyProfile.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\core\PendingNodeCredit.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\FetchMyGoTvBeneficiaries.java
@@ -376,8 +380,10 @@ C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\merch
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\core\utils\TransactionStatusCode.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\responses\SendMoneyToWalletResponse.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\single\node\wallet\merchant\requests\ChangeMerchSecQuestAnswer.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\enterprise\trxn\entities\JournalLineSummary.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\core\utils\CustomPool.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\java\pouchiiintegration\open\api\BillerCaller.java
+C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\enterprise\trxn\entities\TransactionRegister.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\i\ogeyingbo\my\common\approval\workflow\RequestItemBatch.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\integration\wallet\requests\Logger.java
 C:\DBConnectors\PouchiiIntegrration\src\main\java\org\pouchii2\newpartner\test\correct\data\AuthourizationTestData.java

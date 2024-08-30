@@ -113,9 +113,11 @@ i\ogeyingbo\my\common\lenders\api\requests\RePaymentInfo.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\CreateNewMerchant.class
 org\pouchii2\callback\url\RepaymentInfo.class
 org\pouchii2\integration\wallet\requests\FetchMyElectricityBeneficiaries.class
+i\ogeyingbo\enterprise\trxn\entities\TransactionHistory.class
 org\pouchii2\integration\merchant\requests\MerchFetchMySecurityQuestFlow.class
 org\pouchii2\integration\merchant\responses\WalletInfo.class
 i\ogeyingbo\ussd\generic\service\USSDMenuItems.class
+i\ogeyingbo\enterprise\trxn\entities\AbstractEntity.class
 i\ogeyingbo\core\utils\VerticleTemplate.class
 org\pouchii2\integration\wallet\responses\Bank2.class
 org\pouchii2\newpartner\test\correct\data\RegistrationTestData.class
@@ -131,6 +133,7 @@ i\ogeyingbo\single\node\wallet\merchant\requests\CreateNewMerchantWallet.class
 org\pouchii2\integration\newpartner\setup\responses\FetchMerchantCredentialResponse.class
 i\ogeyingbo\single\node\wallet\requests\ReleaseFundLockRequest.class
 i\ogeyingbo\my\common\lenders\api\responses\Fees.class
+i\ogeyingbo\enterprise\trxn\entities\TransactionRegister.class
 i\ogeyingbo\single\node\wallet\merchant\requests\GetMerchSecurityByMerchId.class
 i\java\pouchiiintegration\BillerServiceCaller.class
 org\pouchii2\integration\wallet\requests\FetchMyTrxnHistory.class
@@ -157,6 +160,7 @@ org\monicenta\lenders\api\GenericCodec.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchantLogOut.class
 org\pouchii2\integration\wallet\requests\AccountNameEnquiryRequest.class
 org\pouchii2\integration\merchant\requests\ChangeMerchantAuthPin.class
+i\ogeyingbo\enterprise\trxn\entities\JournalLine.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchBulkDisbursementUpload.class
 org\pouchii2\integration\wallet\requests\DataSubscriptionRequest.class
 org\pouchii2\integration\wallet\requests\FetchDataPlans.class
@@ -397,6 +401,7 @@ i\java\pouchiiintegration\open\api\ProfileCaller.class
 i\ogeyingbo\testgroup\WalletWrongTestData.class
 org\pouchii2\integration\wallet\requests\CreateMerchCustomerWallet.class
 i\ogeyingbo\core\utils\EmptyVerticle.class
+i\ogeyingbo\enterprise\trxn\entities\Journal.class
 i\ogeyingbo\single\node\wallet\requests\FetchDataPlans.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\responses\AdminResponseBase.class
 org\monicenta\lenders\api\LenderLoanAppNotifyProc.class
@@ -456,6 +461,7 @@ i\ogeyingbo\single\node\wallet\requests\DeleteWalletBeneficiary.class
 org\pouchii2\integration\wallet\requests\FetchMyDSTVBeneficiaries.class
 i\ogeyingbo\my\common\lenders\api\requests\RequestBase.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMyWalletBalances.class
+i\ogeyingbo\enterprise\trxn\entities\JournalLineSummary.class
 org\pouchii2\integration\open\api\test\RegistrationTest.class
 i\ogeyingbo\my\common\lenders\api\responses\LoanDisburseNotifyResponse.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\requests\InitializePartnerWallet.class

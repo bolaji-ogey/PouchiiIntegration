@@ -92,7 +92,21 @@
           <version>4.3.7</version>
         </dependency>
         
+        <dependency>
+          <groupId>jakarta.persistence</groupId>
+          <artifactId>jakarta.persistence-api</artifactId>
+          <version>3.1.0</version>
+        </dependency>
         
+        
+        <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.30</version>
+                <scope>provided</scope>
+            </dependency>
+            
+            
         <dependency>
           <groupId>io.vertx</groupId>
           <artifactId>vertx-junit5</artifactId>
