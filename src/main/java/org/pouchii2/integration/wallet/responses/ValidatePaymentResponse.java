@@ -16,20 +16,14 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
+
 @JsonPropertyOrder({"responseCode", "responseMessage", "responseTime", "data"})
-public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
+public class ValidatePaymentResponse   extends  PouchiiResponseBase  {
     
     @JsonProperty("data")
-    private  GetWalletRespData    data  =  new  GetWalletRespData();
-    
-    public  void  setData(GetWalletRespData  inGetWalletRespData){
-        data  =  inGetWalletRespData;
-    }
+    private  ValidatePaymentResponseData   data   =  new  ValidatePaymentResponseData();
     
     
-    public   GetWalletRespData   getData(){
-        return   data;
-    }
     
     
      public  final  JSONObject  convertToJSON(){
@@ -62,12 +56,12 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
     }
      
      
-     public   final  GetCustomersWalletsResp  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
-        GetCustomersWalletsResp   customersWalletsResp  =  null;
+     public   final  ValidatePaymentResponse  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
+        ValidatePaymentResponse   validatePaymentResponse  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              validatePaymentResponse = objectMapper.readValue(inObjectJSON, ValidatePaymentResponse.class);
                this.logResponse(con, inObjectJSON, true);
             }catch(Exception ex){
               this.logResponse(con, inObjectJSON, false);
@@ -75,24 +69,27 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  validatePaymentResponse;
     }
      
      
      
-    public  static  GetCustomersWalletsResp  readFromJSON(String  inObjectJSON){ 
-        GetCustomersWalletsResp  customersWalletsResp  =  null;
+    public  static  ValidatePaymentResponse  readFromJSON(String  inObjectJSON){ 
+        ValidatePaymentResponse  validatePaymentResponse  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              validatePaymentResponse = objectMapper.readValue(inObjectJSON, ValidatePaymentResponse.class);
             }catch(Exception ex){
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  validatePaymentResponse;
     }
       
-   
+ 
+    
+    
+    
 }

@@ -16,23 +16,22 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"responseCode", "responseMessage", "responseTime", "data"})
-public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
+@JsonPropertyOrder({"data"})
+public class RequestMoneyNotifyByCustRefResp  extends  PouchiiResponseBase  {
+    
     
     @JsonProperty("data")
-    private  GetWalletRespData    data  =  new  GetWalletRespData();
+    RequestMoneyNotifyByCustRefRespData  data = new  RequestMoneyNotifyByCustRefRespData();
     
-    public  void  setData(GetWalletRespData  inGetWalletRespData){
-        data  =  inGetWalletRespData;
-    }
+   public  RequestMoneyNotifyByCustRefRespData   getData(){
+       return  data;
+   }
+   
+   public  void  setData(RequestMoneyNotifyByCustRefRespData   inData){
+       data = inData;
+   }
     
-    
-    public   GetWalletRespData   getData(){
-        return   data;
-    }
-    
-    
-     public  final  JSONObject  convertToJSON(){
+    public  final  JSONObject  convertToJSON(){
         JSONObject  returnedJson =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
@@ -62,37 +61,38 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
     }
      
      
-     public   final  GetCustomersWalletsResp  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
-        GetCustomersWalletsResp   customersWalletsResp  =  null;
+     public   final  RequestMoneyNotifyByCustRefResp  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
+        RequestMoneyNotifyByCustRefResp   requestMoneyNotifyByCustRefResp  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
-               this.logResponse(con, inObjectJSON, true);
+              requestMoneyNotifyByCustRefResp = objectMapper.readValue(inObjectJSON, RequestMoneyNotifyByCustRefResp.class);
+              // this.logResponse(con, inObjectJSON, true);
             }catch(Exception ex){
-              this.logResponse(con, inObjectJSON, false);
+             // this.logResponse(con, inObjectJSON, false);
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  requestMoneyNotifyByCustRefResp;
     }
      
      
      
-    public  static  GetCustomersWalletsResp  readFromJSON(String  inObjectJSON){ 
-        GetCustomersWalletsResp  customersWalletsResp  =  null;
+    public  static  RequestMoneyNotifyByCustRefResp  readFromJSON(String  inObjectJSON){ 
+        RequestMoneyNotifyByCustRefResp   requestMoneyNotifyByCustRefResp  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              requestMoneyNotifyByCustRefResp = objectMapper.readValue(inObjectJSON, RequestMoneyNotifyByCustRefResp.class);
             }catch(Exception ex){
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  requestMoneyNotifyByCustRefResp;
     }
       
-   
+    
+    
 }

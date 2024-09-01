@@ -15,9 +15,10 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"responseCode", "responseMessage", "responseTime"})
+@JsonPropertyOrder({"responseCode", "responseMessage", "requiredLogout",   "requireLogin", "requireRefreshToken",
+                      "requiredPasswordChange",  "requiredVerification", "requiredPinCreation", "responseTime"}) 
 public class RequestMoneyResponse extends  PouchiiResponseBase  {
-    
+     
     
      public  final  JSONObject  convertToJSON(){
         JSONObject  returnedJson =  null;

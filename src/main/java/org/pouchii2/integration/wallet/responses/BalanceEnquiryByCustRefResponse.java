@@ -11,25 +11,17 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.sql.Connection;
 import org.json.JSONObject;
-
+ 
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"responseCode", "responseMessage", "responseTime", "data"})
-public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
+@JsonPropertyOrder({ "data"}) 
+public class  BalanceEnquiryByCustRefResponse   extends  PouchiiResponseBase  {
     
     @JsonProperty("data")
-    private  GetWalletRespData    data  =  new  GetWalletRespData();
+    private   BalanceEnquiryByCustRefRespData    data    = new   BalanceEnquiryByCustRefRespData();
     
-    public  void  setData(GetWalletRespData  inGetWalletRespData){
-        data  =  inGetWalletRespData;
-    }
-    
-    
-    public   GetWalletRespData   getData(){
-        return   data;
-    }
     
     
      public  final  JSONObject  convertToJSON(){
@@ -62,12 +54,12 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
     }
      
      
-     public   final  GetCustomersWalletsResp  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
-        GetCustomersWalletsResp   customersWalletsResp  =  null;
+     public   final  BalanceEnquiryByCustRefResponse  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
+        BalanceEnquiryByCustRefResponse   balanceEnquiryByCustRefResponse  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              balanceEnquiryByCustRefResponse = objectMapper.readValue(inObjectJSON, BalanceEnquiryByCustRefResponse.class);
                this.logResponse(con, inObjectJSON, true);
             }catch(Exception ex){
               this.logResponse(con, inObjectJSON, false);
@@ -75,24 +67,27 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  balanceEnquiryByCustRefResponse;
     }
      
      
      
-    public  static  GetCustomersWalletsResp  readFromJSON(String  inObjectJSON){ 
-        GetCustomersWalletsResp  customersWalletsResp  =  null;
+    public  static  BalanceEnquiryByCustRefResponse  readFromJSON(String  inObjectJSON){ 
+        BalanceEnquiryByCustRefResponse  balanceEnquiryByCustRefResponse  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              balanceEnquiryByCustRefResponse = objectMapper.readValue(inObjectJSON, BalanceEnquiryByCustRefResponse.class);
             }catch(Exception ex){
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  balanceEnquiryByCustRefResponse;
     }
       
-   
+ 
+    
+    
 }
+

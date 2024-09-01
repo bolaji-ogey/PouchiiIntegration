@@ -19,8 +19,7 @@ import org.json.JSONObject;
  * @author BOLAJI-OGEYINGBO
  */
 @JsonPropertyOrder({"responseCode", "responseMessage", "requiredLogout",   "requireLogin", "requireRefreshToken",
-                      "requiredPasswordChange",  "requiredVerification", "requiredPinCreation", "responseTime",
-                         ""}) 
+                      "requiredPasswordChange",  "requiredVerification", "requiredPinCreation", "responseTime"}) 
 public class PouchiiResponseBase  {  
     
     @JsonProperty("responseCode")

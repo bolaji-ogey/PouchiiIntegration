@@ -16,21 +16,26 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"responseCode", "responseMessage", "responseTime", "data"})
-public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
+@JsonPropertyOrder({ "data"})
+public class AccountNameEnquiryResponse   extends  PouchiiResponseBase  {
+    
     
     @JsonProperty("data")
-    private  GetWalletRespData    data  =  new  GetWalletRespData();
-    
-    public  void  setData(GetWalletRespData  inGetWalletRespData){
-        data  =  inGetWalletRespData;
-    }
+    private    AccountNameEnquiryRespData    data  =  new  AccountNameEnquiryRespData();
     
     
-    public   GetWalletRespData   getData(){
-        return   data;
-    }
     
+     
+   public  AccountNameEnquiryRespData  getData(){
+       return  data;
+   }
+    
+   public  void  setData(AccountNameEnquiryRespData  inData){
+          data = inData;
+   }
+   
+   
+   
     
      public  final  JSONObject  convertToJSON(){
         JSONObject  returnedJson =  null;
@@ -62,12 +67,12 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
     }
      
      
-     public   final  GetCustomersWalletsResp  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
-        GetCustomersWalletsResp   customersWalletsResp  =  null;
+     public   final  AccountNameEnquiryResponse  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
+        AccountNameEnquiryResponse   accountNameEnquiryResponse  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              accountNameEnquiryResponse = objectMapper.readValue(inObjectJSON, AccountNameEnquiryResponse.class);
                this.logResponse(con, inObjectJSON, true);
             }catch(Exception ex){
               this.logResponse(con, inObjectJSON, false);
@@ -75,24 +80,26 @@ public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  accountNameEnquiryResponse;
     }
      
      
      
-    public  static  GetCustomersWalletsResp  readFromJSON(String  inObjectJSON){ 
-        GetCustomersWalletsResp  customersWalletsResp  =  null;
+    public  static  AccountNameEnquiryResponse  readFromJSON(String  inObjectJSON){ 
+        AccountNameEnquiryResponse  accountNameEnquiryResponse  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+              accountNameEnquiryResponse = objectMapper.readValue(inObjectJSON, AccountNameEnquiryResponse.class);
             }catch(Exception ex){
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  customersWalletsResp;
+        return  accountNameEnquiryResponse;
     }
       
-   
+ 
+    
+    
 }
