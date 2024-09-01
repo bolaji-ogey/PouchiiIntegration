@@ -4,6 +4,8 @@
  */
 package org.pouchii2.integration.wallet.responses;
  
+import java.math.BigDecimal;
+
 
 /**
  *
@@ -15,8 +17,11 @@ public class BonusWallet {
     
     private  String   walletNumber = ""; 
     private  String   dateCreated = "";
-    private  String   bookedBalance = "0.00";
-    private  String   availableBalance = "0.00"; 
+    
+    private  BigDecimal   bookedBalance =  new  BigDecimal(0.00);
+    private  BigDecimal   availableBalance =  new  BigDecimal(0.00);
+    
+    private   boolean  walletStatus  =  false;
        
     
     public  Currency  getCurrency(){
@@ -31,12 +36,17 @@ public class BonusWallet {
         return  dateCreated;
     }
     
-    public  String  getBookedBalance(){
+    public  BigDecimal  getBookedBalance(){
         return  bookedBalance;
     }
     
-    public  String  getAvailableBalance(){
+    public  BigDecimal  getAvailableBalance(){
         return  availableBalance;
+    }
+    
+    
+    public  boolean  getWalletStatus(){
+        return  walletStatus;
     }
     
     
@@ -54,13 +64,19 @@ public class BonusWallet {
            dateCreated = inDateCreated;
     }
     
-    public  void  setBookedBalance(String  inBookedBalance){
+    public  void  setBookedBalance(BigDecimal  inBookedBalance){
            bookedBalance = inBookedBalance;
     }
     
-    public  void  setAvailableBalance(String  inAvailableBalance){
+    public  void  setAvailableBalance(BigDecimal  inAvailableBalance){
            availableBalance = inAvailableBalance;
     }
+    
+    
+    public  void  setWalletStatus(boolean  inWalletStatus){
+        walletStatus   =   inWalletStatus;
+    }
+    
     
     
 }

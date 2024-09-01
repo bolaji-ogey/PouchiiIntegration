@@ -2,14 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package org.pouchii2.integration.wallet.requests;
+package org.pouchii2.integration.wallet.responses;
 
- 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper; 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.sql.Connection;
 import org.json.JSONObject;
 
@@ -17,15 +14,21 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
-public class GetCustomerWallets    extends  PouchiiRequestBase   {
-          
-    @NotBlank(message = "Currency cannot be null or empty")
-    @Size(min=3,  max=3, message="Currency must be three (3) letter code")
-    private  String  currency = "NGN";
-     
+public class GetCustomersWalletsResp  extends  PouchiiResponseBase  {
+    
+    private  GetWalletRespData    data  =  new  GetWalletRespData();
+    
+    public  void  setData(GetWalletRespData  inGetWalletRespData){
+        data  =  inGetWalletRespData;
+    }
     
     
-    public  final  JSONObject  convertToJSON(){
+    public   GetWalletRespData   getData(){
+        return   data;
+    }
+    
+    
+     public  final  JSONObject  convertToJSON(){
         JSONObject  returnedJson =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
@@ -53,57 +56,39 @@ public class GetCustomerWallets    extends  PouchiiRequestBase   {
         }
       return  returnedJsonString;
     }
-    
-    
-    
-    public   final  GetCustomerWallets  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
-        GetCustomerWallets  getCustomerWallets  =  null;
+     
+     
+     public   final  GetCustomersWalletsResp  readFromJSONAndLog(Connection con, final String  inObjectJSON){ 
+        GetCustomersWalletsResp   customersWalletsResp  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              getCustomerWallets = objectMapper.readValue(inObjectJSON, GetCustomerWallets.class);
-               this.logRequest(con, inObjectJSON, true);
+              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
+               this.logResponse(con, inObjectJSON, true);
             }catch(Exception ex){
-              this.logRequest(con, inObjectJSON, false);
+              this.logResponse(con, inObjectJSON, false);
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  getCustomerWallets;
+        return  customersWalletsResp;
     }
      
      
-    
-    public  static  GetCustomerWallets  readFromJSON(String  inObjectJSON){ 
-        GetCustomerWallets  getCustomerWallets  =  null;
+     
+    public  static  GetCustomersWalletsResp  readFromJSON(String  inObjectJSON){ 
+        GetCustomersWalletsResp  customersWalletsResp  =  null;
         ObjectMapper objectMapper = new ObjectMapper();
         try{
               objectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-              getCustomerWallets = objectMapper.readValue(inObjectJSON, GetCustomerWallets.class);
+              customersWalletsResp = objectMapper.readValue(inObjectJSON, GetCustomersWalletsResp.class);
             }catch(Exception ex){
                   ex.printStackTrace();
             }finally{
                objectMapper = null;
             }
-        return  getCustomerWallets;
+        return  customersWalletsResp;
     }
       
-     
-    
-         
-    public  String  getCurrency(){
-        return  currency;
-    }
-    
-    
-    public  void  setCurrency(String  inCurrency){
-          currency = inCurrency;
-    }
-    
-    
-    
-    public  static void  main(String[] argd){
-        System.out.println(new GetCustomerWallets().convertToJSONString());
-    }
-    
+   
 }

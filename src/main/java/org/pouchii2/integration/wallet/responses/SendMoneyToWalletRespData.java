@@ -4,49 +4,111 @@
  */
 package org.pouchii2.integration.wallet.responses;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"responseCode", "responseMessage", "requiredLogout",   "requireLogin",
-                          "requireRefreshToken", "requiredPasswordChange", "requiredVerification",
-                             "requiredPinCreation", "responseTime"})
+@JsonPropertyOrder({"transactionId", "transactionReference", "processorResponseCode",   "processorResponseReference",
+                        "transactionStatus", "transactionAmount", "transactionValueAmount", "transactionFeeAmount",
+                             "bonusPotCreditAmount", "bonusPotDebitAmount", "beneficiaryAccountName", "beneficiaryAccountNumber", 
+                            "beneficiaryBankName", "beneficiaryBankCode", "senderAccountName", "senderAccountNumber", "serviceCustomerId",
+                        "narration", "transactionStartDate", "transactionEndDate", "transactionFees", "transactionEvent", "transactionType", 
+                             "transactionMode", "senderName", "receiverName", "receivingBank", "serviceProvider", 
+                                  "productProviderCustomerName",  "productProviderCustomerAddress"})
  
 public class SendMoneyToWalletRespData {
     
+    @JsonProperty("transactionId")
      private  long   transactionId  = -1;
+    
+    @JsonProperty("transactionReference")
     private  String  transactionReference = "";
+    
+    @JsonProperty("processorResponseCode")
     private  String  processorResponseCode = "";
+    
+    @JsonProperty("processorResponseReference")
     private  String  processorResponseReference = "";
+    
+    @JsonProperty("transactionStatus")
     private  String  transactionStatus = "";
+    
+    @JsonProperty("transactionAmount")
     private  String  transactionAmount = "";
+    
+    @JsonProperty("transactionValueAmount")
     private  String  transactionValueAmount = "";
+    
+    @JsonProperty("transactionFeeAmount")
     private  String  transactionFeeAmount = "";
+    
+    @JsonProperty("bonusPotCreditAmount")
     private  String  bonusPotCreditAmount = "";
+    
+    @JsonProperty("bonusPotDebitAmount")
     private  String  bonusPotDebitAmount = "";
+    
+    @JsonProperty("beneficiaryAccountName")
     private  String  beneficiaryAccountName = "";
+    
+    @JsonProperty("beneficiaryAccountNumber")
     private  String  beneficiaryAccountNumber = "";
+    
+    @JsonProperty("beneficiaryBankName")
     private  String  beneficiaryBankName = "";
+    
+    @JsonProperty("beneficiaryBankCode")
     private  String  beneficiaryBankCode = "";
+    
+    @JsonProperty("senderAccountName")
     private  String  senderAccountName = "";
+    
+    @JsonProperty("senderAccountNumber")
     private  String  senderAccountNumber = "";
     
+    @JsonProperty("serviceCustomerId")
     private  String  serviceCustomerId = "";
+    
+    @JsonProperty("narration")
     private  String  narration = "Send Money";
+    
+    @JsonProperty("transactionStartDate")
     private  String  transactionStartDate = "";
+    
+    @JsonProperty("transactionEndDate")
     private  String  transactionEndDate = "";
+    
+    @JsonProperty("transactionFees")
     private  String  transactionFees = "";
+    
+    @JsonProperty("transactionEvent")
     private  String  transactionEvent = "";
+    
+    @JsonProperty("transactionType")
     private  String  transactionType = "";
+    
+    @JsonProperty("transactionMode")
     private  String  transactionMode = "";
+    
+    @JsonProperty("senderName")
     private  String  senderName = "";
+    
+    @JsonProperty("receiverName")
     private  String  receiverName = "";
+    
+    @JsonProperty("receivingBank")
     private  String  receivingBank = "";
+    
+    @JsonProperty("serviceProvider")
     private  String  serviceProvider = "";
     
+    @JsonProperty("productProviderCustomerName")
     private  String  productProviderCustomerName = "";
+    
+    @JsonProperty("productProviderCustomerAddress")
     private  String  productProviderCustomerAddress = "";
     
    

@@ -16,6 +16,7 @@ org\pouchii2\integration\newpartner\setup\responses\Currency.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchantLogOut.class
 i\ogeyingbo\core\utils\AESUtil.class
 org\pouchii2\integration\merchant\requests\MyMerchReqMoneyNotifications.class
+i\ogeyingbo\enterprise\wallet\entities\OperationalSwiftWallet.class
 org\monicenta\lenders\api\RepaymentInfo.class
 org\pouchii2\integration\wallet\requests\FetchLockRequest.class
 i\ogeyingbo\testgroup\RegistrationWrongTestData.class
@@ -76,15 +77,19 @@ org\pouchii2\partner\test\wrong\data\ProfileWrongTestData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\ProcessMerchBulkDisbursement.class
 i\ogeyingbo\single\node\wallet\requests\FetchDataProviders.class
 org\pouchii2\integration\merchant\requests\GetMerchSecurityByMerchId.class
+org\pouchii2\integration\wallet\responses\WalletInfo.class
 org\wallet\httpservice\model\HttpCallServer.class
 org\pouchii2\callback\url\HttpCallServer.class
 org\pouchii2\integration\newpartner\setup\requests\PartnerCreationRequest.class
 org\pouchii2\integration\wallet\requests\GetCustomerWallets.class
 org\pouchii2\newpartner\test\correct\data\ProfileTestData.class
 i\ogeyingbo\single\node\wallet\requests\TrxnDetailsRequest.class
+i\ogeyingbo\enterprise\wallet\entities\MerchantSwiftWallet.class
 org\pouchii2\superadmin\user\setup\requests\AuthenticationTokenVerification.class
 org\pouchii2\callback\url\MiniWallet.class
+org\pouchii2\integration\wallet\responses\ReleaseFundLockRespData.class
 i\ogeyingbo\core\utils\DBStaticUtils.class
+org\pouchii2\integration\wallet\responses\LockFundRespData.class
 i\ogeyingbo\core\utils\CustomPool$ResultEntity.class
 org\pouchii2\integration\merchant\requests\MerchFetchMyWalletBalances.class
 org\pouchii2\superadmin\user\setup\requests\StandardUserRegistration.class
@@ -109,6 +114,7 @@ i\ogeyingbo\single\node\wallet\requests\FetchGoTVBouquets.class
 org\pouchii2\integration\merchant\requests\ChangeMerchSecQuestAnswer.class
 org\pouchii2\partner\integration\BillerCallerTest.class
 org\pouchii2\integration\merchant\requests\MerchBulkDisbursementUpload.class
+org\pouchii2\integration\wallet\responses\GetCustomersWalletsResp.class
 i\ogeyingbo\my\common\lenders\api\requests\RePaymentInfo.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\CreateNewMerchant.class
 org\pouchii2\callback\url\RepaymentInfo.class
@@ -135,6 +141,7 @@ i\ogeyingbo\single\node\wallet\requests\ReleaseFundLockRequest.class
 i\ogeyingbo\my\common\lenders\api\responses\Fees.class
 i\ogeyingbo\enterprise\trxn\entities\TransactionRegister.class
 i\ogeyingbo\single\node\wallet\merchant\requests\GetMerchSecurityByMerchId.class
+i\ogeyingbo\enterprise\wallet\entities\CustomerSwiftWallet.class
 i\java\pouchiiintegration\BillerServiceCaller.class
 org\pouchii2\integration\wallet\requests\FetchMyTrxnHistory.class
 i\ogeyingbo\single\node\wallet\requests\BalanceEnquiryByCustReference.class
@@ -196,6 +203,7 @@ i\ogeyingbo\single\node\wallet\core\TransactionHistory.class
 i\ogeyingbo\my\common\loan\mgmt\network\LoanDBUtils.class
 org\pouchii2\partner\test\wrong\data\AuthourizationWrongTestData.class
 i\ogeyingbo\single\node\wallet\requests\RequestMoney.class
+org\pouchii2\integration\wallet\responses\LockFundsResponse.class
 vertx\eventbus\example\BigSerializedObject.class
 i\ogeyingbo\single\node\wallet\merchant\requests\ProcessMerchBulkDisbursement.class
 i\ogeyingbo\ussd\generic\service\CustomPool$ResultEntity.class
@@ -224,6 +232,7 @@ org\pouchii2\integration\wallet\requests\AirtimePurchase.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchantFundTransfer.class
 org\pouchii2\integration\wallet\requests\Logger.class
 i\ogeyingbo\my\common\lenders\api\responses\NullableFeesTest.class
+org\pouchii2\integration\wallet\responses\KycWalletInfo.class
 i\java\pouchiiintegration\RegistrationCallerTest.class
 i\ogeyingbo\testgroup\TestAuthourizationInterface.class
 org\pouchii2\partner\integration\BillerServiceCaller.class
@@ -296,6 +305,7 @@ i\ogeyingbo\single\node\wallet\merchant\requests\backup\ReProcessMerchBulkDisbur
 i\ogeyingbo\single\node\swift\wallet\core\CustomPool.class
 i\ogeyingbo\my\common\loan\services\requests\RefreshAuthourizationToken.class
 org\pouchii2\partner\integration\using\jsonobjects\WalletCallerTest.class
+i\ogeyingbo\enterprise\wallet\entities\AbstractEntity.class
 org\pouchii2\integration\merchant\requests\base\PouchiiMerchRequestBase.class
 org\pouchii2\callback\url\CallBackResultData.class
 org\pouchii2\integration\newpartner\setup\responses\InitializePartnerWalletResponse.class
@@ -313,6 +323,7 @@ org\pouchii2\partner\integration\WalletCallerTest.class
 i\ogeyingbo\core\utils\AESWithKey.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchantIntAuthRequest.class
 i\ogeyingbo\single\node\wallet\requests\RequestBase.class
+i\ogeyingbo\enterprise\wallet\entities\AgentSwiftWallet.class
 org\pouchii2\superadmin\user\setup\requests\PouchiiAdminRequestBase.class
 org\pouchii2\integration\newpartner\setup\requests\FetchMerchantCredentials.class
 org\pouchii2\partner\test\correct\data\ProfileTestData.class
@@ -333,6 +344,7 @@ i\ogeyingbo\core\utils\AsynchronousEcho.class
 org\pouchii2\integration\open\api\WalletCaller.class
 i\ogeyingbo\my\common\lenders\api\responses\LoanRepaymentNotifyReponse.class
 i\ogeyingbo\process\old\excel\example\codes\OldFormatRead.class
+org\pouchii2\integration\wallet\responses\KycUpgradeActionInfo.class
 org\pouchii2\integration\wallet\requests\FetchWalletByIDAndCustRef.class
 i\ogeyingbo\my\common\approval\workflow\CustomPool.class
 org\pouchii2\integration\merchant\responses\MerchantIntAuthRespData.class
@@ -373,6 +385,7 @@ org\pouchii2\callback\url\FormData.class
 i\ogeyingbo\my\common\loan\services\requests\LoanStatusNotification.class
 org\pouchii2\callback\url\CustomPool$ResultEntity.class
 org\pouchii2\integration\wallet\responses\BankListRespData.class
+org\pouchii2\integration\wallet\responses\PendingKycUpgradeRequest.class
 i\ogeyingbo\single\node\swift\wallet\core\BaseRequest.class
 org\pouchii2\partner\integration\AuthourizationCallerTest.class
 i\ogeyingbo\single\node\wallet\merchant\requests\ChangeMerchSecurityQuest.class
@@ -385,6 +398,7 @@ org\pouchii2\integration\newpartner\setup\responses\MerchantCreationResponseData
 org\pouchii2\partner\integration\using\jsonobjects\BillerServiceCaller.class
 i\ogeyingbo\single\node\wallet\merchant\requests\base\MerchantRequestBase.class
 i\test\VirtualThreadTest.class
+org\pouchii2\integration\wallet\responses\CancelFundLockResponse.class
 org\pouchii2\partner\test\correct\data\RegistrationTestData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\ChangeMerchantAuthPin.class
 org\pouchii2\integration\newpartner\setup\requests\UpdatePartnerInfoRequest.class
@@ -405,6 +419,8 @@ i\ogeyingbo\enterprise\trxn\entities\Journal.class
 i\ogeyingbo\single\node\wallet\requests\FetchDataPlans.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\responses\AdminResponseBase.class
 org\monicenta\lenders\api\LenderLoanAppNotifyProc.class
+i\ogeyingbo\enterprise\wallet\entities\PosSwiftWallet.class
+org\pouchii2\integration\wallet\responses\CancelFundLockRespData.class
 org\pouchii2\partner\integration\ProfileCallerTest.class
 org\pouchii2\partner\integration\using\jsonobjects\ProfileCallerTest.class
 org\pouchii2\integration\newpartner\setup\responses\UpdatePartnerInfoResponseData.class
@@ -441,6 +457,7 @@ i\ogeyingbo\my\common\lenders\api\requests\FormData1.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMyProfile.class
 org\pouchii2\integration\wallet\requests\FetchElectricityProviders.class
 org\pouchii2\integration\wallet\responses\PouchiiResponseBase.class
+org\pouchii2\integration\wallet\responses\GetWalletRespData.class
 i\ogeyingbo\process\excel\example\codes\FastExcelHelper.class
 AES256.class
 i\java\client\example\HttpClientExample.class
@@ -474,6 +491,7 @@ vertx\eventbus\example\ReceiverVerticle.class
 i\ogeyingbo\testgroup\RegistrationTestData.class
 i\ogeyingbo\single\node\wallet\core\Transaction.class
 org\pouchii2\integration\wallet\responses\Bankz.class
+org\pouchii2\integration\wallet\responses\ReleaseFundLockResponse.class
 i\ogeyingbo\my\common\lenders\api\responses\CheckPartnerAvailabilityStatusResponse.class
 org\pouchii2\integration\newpartner\setup\responses\PartnerCreationResponseData.class
 org\pouchii2\integration\open\api\BillerCaller.class

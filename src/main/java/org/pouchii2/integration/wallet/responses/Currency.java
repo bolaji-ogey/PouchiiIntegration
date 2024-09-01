@@ -4,6 +4,7 @@
  */
 package org.pouchii2.integration.wallet.responses;
  
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
@@ -14,8 +15,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({"name", "code", "symbol"}) 
 public class Currency {
     
+    @JsonProperty("name")
     private  String  name  =  "";
+    
+    @JsonProperty("code")
     private  String  code  =  "";
+    
+    @JsonProperty("symbol")
     private  String  symbol  =  ""; 
     
     

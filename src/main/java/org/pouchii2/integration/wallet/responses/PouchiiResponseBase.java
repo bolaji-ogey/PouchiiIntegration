@@ -5,6 +5,8 @@
 package org.pouchii2.integration.wallet.responses;
   
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.sql.Connection;
@@ -16,16 +18,36 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"responseCode", "responseMessage", "requiredLogout",   "requireLogin", "requireRefreshToken",
+                      "requiredPasswordChange",  "requiredVerification", "requiredPinCreation", "responseTime",
+                         ""}) 
 public class PouchiiResponseBase  {  
     
+    @JsonProperty("responseCode")
     private  int  responseCode = 401;
+    
+    @JsonProperty("responseMessage")
     private String  responseMessage  =  "";
+    
+    @JsonProperty("requiredLogout")
     private  boolean  requiredLogout  =  false;
+    
+    @JsonProperty("requireLogin")
     private  boolean  requireLogin  =  false;
+    
+    @JsonProperty("requireRefreshToken")
     private  boolean  requireRefreshToken  =  false;
+    
+    @JsonProperty("requiredPasswordChange")
     private  boolean  requiredPasswordChange  =  false;
+    
+    @JsonProperty("requiredVerification")
     private  boolean  requiredVerification  =  false;
+    
+    @JsonProperty("requiredPinCreation")
     private  boolean  requiredPinCreation  =  false;
+    
+    @JsonProperty("responseTime")
     private  String  responseTime  =  ""; 
     
     

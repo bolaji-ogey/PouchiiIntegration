@@ -5,6 +5,7 @@
 package org.pouchii2.integration.wallet.responses;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,9 +16,10 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"responseCode", "responseMessage", "responseTime",   "data"})
+@JsonPropertyOrder({"data"})
 public class SendMoneyToWalletResponse   extends  PouchiiResponseBase  {
     
+    @JsonProperty("data")
    private  SendMoneyToWalletRespData   data  = new  SendMoneyToWalletRespData();
    
    public  SendMoneyToWalletRespData   getData(){

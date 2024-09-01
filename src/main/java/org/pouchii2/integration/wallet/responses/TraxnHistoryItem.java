@@ -4,65 +4,120 @@
  */
 package org.pouchii2.integration.wallet.responses;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  *
  * @author BOLAJI-OGEYINGBO
  */
-@JsonPropertyOrder({"transactionId", "transactionReference", "processorReference",   "transactionEvent",
-                      "transactionType",  "transactionMode", "transactionModeDescription", "currency",
-                         ""})
-//@Getter @Setter @NoArgsConstructor  
-@Entity
-@Table(name="trxn_history_item")
+@JsonPropertyOrder({"transactionId", "transactionReference", "processorReference",   "transactionEvent",  "transactionType",
+                          "transactionMode", "transactionModeDescription", "currency",  "transactionStartDate", "transactionEndDate",
+                      "transactionAmount", "transactionValueAmount", "transactionFeeAmount",  "bonusCreditAmount", "bonusDebitAmount",
+                            "sourceAccount",  "beneficiaryAccount", "purchaseToken", "availableBalanceBeforeTransaction", "bookedBalanceBeforeTransaction", 
+                                 "bookedBalanceAfterTransaction", "transactionStatus", "senderName",   "receiverName",  "receivingBank", "serviceProvider",
+                                     "serviceCustomerId", "narration", "productProviderCustomerName",  "productProviderCustomerAddress" }) 
 public class TraxnHistoryItem {
       
+    @JsonProperty("transactionId") 
     private  long   transactionId  = -1;
+    
+    @JsonProperty("transactionReference")
     private  String  transactionReference = ""; 
+    
+    @JsonProperty("processorReference")
     private  String  processorReference = "";
+    
+    @JsonProperty("transactionEvent")
     private  String  transactionEvent = "";
+    
+    @JsonProperty("transactionType")
     private  String  transactionType = "";
+    
+    @JsonProperty("transactionMode")
     private  String  transactionMode = "";
     
+    @JsonProperty("transactionModeDescription")
     private  String  transactionModeDescription = "";
-    private  Currency  currency  =  new Currency();
-    private  String  transactionStartDate = "";
-    private  String  transactionEndDate = "";
-    private  String  transactionAmount = "";
-    private  String  transactionValueAmount = "";
-    private  String  transactionFeeAmount = "";           
     
+    @JsonProperty("currency")
+    private  Currency  currency  =  new Currency();
+    
+    @JsonProperty("transactionStartDate")
+    private  String  transactionStartDate = "";
+    
+    @JsonProperty("transactionEndDate")
+    private  String  transactionEndDate = "";
+    
+    @JsonProperty("transactionAmount")
+    private  String  transactionAmount = "";
+    
+    @JsonProperty("transactionValueAmount")
+    private  String  transactionValueAmount = "";
+    
+    @JsonProperty("transactionFeeAmount")
+    private  String  transactionFeeAmount = "";  
+    
+   
+    
+    
+    @JsonProperty("bonusCreditAmount")
     private  String  bonusCreditAmount = "";
+    
+    @JsonProperty("bonusDebitAmount")
     private  String  bonusDebitAmount = "";
                 
-    
+    @JsonProperty("sourceAccount")
     private  String  sourceAccount = "";
+    
+    
+    
+    @JsonProperty("beneficiaryAccount")
     private  String  beneficiaryAccount = "";
+    
+    @JsonProperty("purchaseToken")
     private  String  purchaseToken = "";
     
-    
+    @JsonProperty("availableBalanceBeforeTransaction")
     private  String  availableBalanceBeforeTransaction = "0.00";
+    
+    @JsonProperty("availableBalanceAfterTransaction")
     private  String  availableBalanceAfterTransaction = "0.00";
+    
+    @JsonProperty("bookedBalanceBeforeTransaction")
     private  String  bookedBalanceBeforeTransaction = "0.00";
+    
+    @JsonProperty("bookedBalanceAfterTransaction")
     private  String  bookedBalanceAfterTransaction = "0.00";
     
+    
+         
+    
+    @JsonProperty("transactionStatus")
     private  String  transactionStatus = ""; 
     
+    @JsonProperty("senderName")
     private  String  senderName = "";
+    
+    @JsonProperty("receiverName")
     private  String  receiverName = "";
     
+    @JsonProperty("receivingBank")
     private  String  receivingBank = "";
+    
+    @JsonProperty("serviceProvider")
     private  String  serviceProvider = "";
     
+    @JsonProperty("serviceCustomerId")
     private  String  serviceCustomerId = "";
+    
+    @JsonProperty("narration")
     private  String  narration = "Send Money";
      
-    
-    
+    @JsonProperty("productProviderCustomerName")
     private  String  productProviderCustomerName = "";
+    
+    @JsonProperty("productProviderCustomerAddress")
     private  String  productProviderCustomerAddress = "";
     
     

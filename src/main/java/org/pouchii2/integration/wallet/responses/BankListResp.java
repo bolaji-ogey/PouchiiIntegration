@@ -5,6 +5,8 @@
 package org.pouchii2.integration.wallet.responses;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.sql.Connection;
@@ -14,8 +16,10 @@ import org.json.JSONObject;
  *
  * @author BOLAJI-OGEYINGBO
  */
+@JsonPropertyOrder({"data"})
 public class BankListResp  extends  PouchiiResponseBase  {
     
+    @JsonProperty("data")
     BankListRespData  data = new  BankListRespData();
     
    public  BankListRespData   getData(){
