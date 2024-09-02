@@ -8,6 +8,8 @@ package org.pouchii2.integration.wallet.requests;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper; 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import java.sql.Connection;
 import org.json.JSONObject;
 
@@ -17,11 +19,21 @@ import org.json.JSONObject;
  */
 public class AcceptOrRejectRequestMoney    extends  PouchiiRequestBase  {
       
-    private  long  requestMoneyId = -1; 
+    @NotBlank(message = "Request money ID cannot be null or empty")
+    @Size(min=1,  message="Request money ID must be four (4) letter code")
+    private  long  requestMoneyId = -1;     
+    
     private  boolean  requestMoneyStatus = true; 
+    
+    
     private  boolean  cancelRequest = false; 
+    
+    
     private  String  reason = "-"; 
-    private  String  trxnPin = "-";  
+    
+    @NotBlank(message = "Transaction PIN cannot be null or empty")
+    @Size(min=4,  max=4, message="Transaction PIN must be four (4) letter code")
+    private  int  transactionPin = 0;  
     
        
     
@@ -107,8 +119,8 @@ public class AcceptOrRejectRequestMoney    extends  PouchiiRequestBase  {
         return  reason;
     }
     
-    public  String  getTrxnPin(){
-        return  trxnPin;
+    public  int  getTransactionPin(){
+        return  transactionPin;
     }
     
     
@@ -131,8 +143,8 @@ public class AcceptOrRejectRequestMoney    extends  PouchiiRequestBase  {
            reason = inReason;
     }
     
-    public  void  setTrxnPin(String  inTrxnPin){
-           trxnPin = inTrxnPin;
+    public  void  setTransactionPin(int  inTrxnPin){
+           transactionPin = inTrxnPin;
     }
     
     

@@ -28,10 +28,13 @@ i\ogeyingbo\my\common\lenders\api\responses\LoanApplStatusEnquiryResponse.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\requests\FetchApplicationPartner.class
 i\ogeyingbo\single\node\wallet\merchant\requests\ResetMerchantAuth.class
 org\pouchii2\callback\url\CallBackTrxnUpdateService.class
+org\pouchii2\integration\wallet\responses\BalanceEnquiryByCustRefResponse.class
 i\ogeyingbo\my\common\approval\workflow\ApprovalWType.class
+org\pouchii2\integration\wallet\responses\RequestMoneyNotifyByCustRefRespContent.class
 i\ogeyingbo\core\utils\AESUtilSimple.class
 i\ogeyingbo\single\node\wallet\core\AccountCredit.class
 org\pouchii2\integration\open\api\AuthourizationCaller.class
+org\pouchii2\integration\wallet\responses\DataSubscriptnResponse.class
 i\ogeyingbo\single\node\wallet\merchant\requests\ChangeMerchSecQuestAnswer.class
 org\pouchii2\partner\base\AuthourizationInterface.class
 i\ogeyingbo\single\node\wallet\core\PendingProcessTrxn.class
@@ -40,12 +43,14 @@ i\ogeyingbo\single\node\wallet\merchant\requests\backup\ResetMerchantAuth.class
 i\ogeyingbo\single\node\wallet\merchant\requests\SendMerchResetPinReq.class
 i\ogeyingbo\testgroup\AuthourizationWrongTestData.class
 org\pouchii2\integration\newpartner\setup\responses\UserTypeInfo.class
+org\pouchii2\integration\wallet\responses\TrxnJournalItem.class
 i\ogeyingbo\single\node\wallet\merchant\requests\CreateMerchSecurityQuestion.class
 i\ogeyingbo\single\node\wallet\responses\ResponseBase.class
 i\ogeyingbo\my\common\lenders\api\responses\LoanSummaryCalculationResponse.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\SendMerchResetPinReq.class
 org\pouchii2\callback\url\LoanApplicationNotifyReq.class
 org\pouchii2\partner\integration\using\jsonobjects\SchoolServiceCaller.class
+org\pouchii2\integration\wallet\responses\BalanceEnquiryByCustRefRespData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchantRequestBase.class
 i\ogeyingbo\my\common\lenders\api\responses\ResponseData.class
 i\ogeyingbo\single\node\superadmin\setup\requests\StandardUserRegistration.class
@@ -69,6 +74,7 @@ org\pouchii2\integration\merchant\responses\BonusWallet.class
 org\pouchii2\partner\test\wrong\data\RegistrationWrongTestData.class
 org\pouchii2\newpartner\integration\setup\open\api\RegistrationCaller.class
 org\pouchii2\integration\newpartner\setup\requests\FetchApplicationPartner.class
+org\pouchii2\integration\wallet\responses\DataSubscriptnRespData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\ReProcessMerchBulkDisbursement.class
 org\pouchii2\integration\newpartner\setup\requests\CreatePartnerOperationalWallet.class
 i\ogeyingbo\core\utils\RandomString.class
@@ -86,6 +92,7 @@ org\pouchii2\newpartner\test\correct\data\ProfileTestData.class
 i\ogeyingbo\single\node\wallet\requests\TrxnDetailsRequest.class
 i\ogeyingbo\enterprise\wallet\entities\MerchantSwiftWallet.class
 org\pouchii2\superadmin\user\setup\requests\AuthenticationTokenVerification.class
+org\pouchii2\integration\wallet\responses\AirtimePurchaseResponse.class
 org\pouchii2\callback\url\MiniWallet.class
 org\pouchii2\integration\wallet\responses\ReleaseFundLockRespData.class
 i\ogeyingbo\core\utils\DBStaticUtils.class
@@ -124,7 +131,9 @@ org\pouchii2\integration\merchant\requests\MerchFetchMySecurityQuestFlow.class
 org\pouchii2\integration\merchant\responses\WalletInfo.class
 i\ogeyingbo\ussd\generic\service\USSDMenuItems.class
 i\ogeyingbo\enterprise\trxn\entities\AbstractEntity.class
+org\pouchii2\integration\wallet\responses\AccountNameEnquiryResponse.class
 i\ogeyingbo\core\utils\VerticleTemplate.class
+org\pouchii2\integration\wallet\responses\TrxnDetailResponse.class
 org\pouchii2\integration\wallet\responses\Bank2.class
 org\pouchii2\newpartner\test\correct\data\RegistrationTestData.class
 i\ogeyingbo\my\common\loan\mgmt\network\PartnerLoanTenure.class
@@ -149,6 +158,7 @@ i\ogeyingbo\single\node\wallet\requests\AccountNameEnquiryRequest.class
 org\pouchii2\integration\newpartner\setup\responses\MerchantCreationResponse.class
 i\ogeyingbo\core\utils\EventLoop.class
 i\ogeyingbo\process\excel\example\codes\EncryptionTest.class
+org\pouchii2\integration\wallet\responses\TrxnDetailRespData.class
 org\pouchii2\newpartner\integration\setup\using\json\objects\AdminUserAuthourizationCallerTest.class
 i\ogeyingbo\single\node\wallet\requests\FetchMyDataBeneficiaries.class
 org\pouchii2\integration\wallet\requests\FetchMyAirtimeBeneficiaries.class
@@ -160,6 +170,7 @@ org\pouchii2\integration\open\api\test\BillerTest.class
 org\pouchii2\integration\wallet\requests\SendMoneyToWallet.class
 i\ogeyingbo\testgroup\ProfileTestData.class
 org\pouchii2\integration\wallet\requests\FetchMyGoTvBeneficiaries.class
+org\pouchii2\integration\wallet\responses\RequestMoneyNotifyByCustRefRespData.class
 org\pouchii2\newpartner\integration\setup\open\api\AuthourizationCaller.class
 i\ogeyingbo\single\node\wallet\requests\FetchDSTVBouquets.class
 i\ogeyingbo\testgroup\AuthourizationTestData.class
@@ -180,6 +191,7 @@ org\pouchii2\partner\base\GenericCaller.class
 i\ogeyingbo\my\common\approval\workflow\CustomPool$ResultEntity.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMySecurityQuestFlow.class
 org\pouchii2\integration\merchant\requests\ChangeMerchSecurityQuest.class
+org\pouchii2\integration\wallet\responses\ValidatePaymentResponseData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchFetchMyBilkDisbursementTrxn.class
 org\pouchii2\integration\wallet\responses\RequestMoneyResponse.class
 org\pouchii2\integration\wallet\requests\BalanceEnquiryByCustReference.class
@@ -199,6 +211,7 @@ i\ogeyingbo\single\node\wallet\merchant\requests\MerchBulkDisbursementUpload.cla
 org\pouchii2\integration\wallet\responses\BonusWallet.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\CreateMerchantAuthPin.class
 i\java\pouchiiintegration\open\api\WalletCaller.class
+org\pouchii2\integration\wallet\responses\ValidatePaymentResponse.class
 i\ogeyingbo\single\node\wallet\core\TransactionHistory.class
 i\ogeyingbo\my\common\loan\mgmt\network\LoanDBUtils.class
 org\pouchii2\partner\test\wrong\data\AuthourizationWrongTestData.class
@@ -220,6 +233,7 @@ i\ogeyingbo\single\node\wallet\core\WalletDebitHistory.class
 i\ogeyingbo\single\node\wallet\requests\SendMoneyToWallet.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\requests\AdminRequestBase.class
 i\ogeyingbo\single\node\wallet\requests\CableTVPaymentRequest.class
+org\pouchii2\integration\wallet\responses\RequestMoneyNotifyByCustRefResp.class
 org\pouchii2\integration\wallet\responses\Currency.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MyMerchReqMoneyNotifications.class
 org\pouchii2\integration\merchant\responses\MerchantIntAuthResponse.class
@@ -321,6 +335,7 @@ org\pouchii2\partner\integration\using\jsonobjects\LoanInsuranceCaller.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\requests\PartnerCreationRequest.class
 org\pouchii2\partner\integration\WalletCallerTest.class
 i\ogeyingbo\core\utils\AESWithKey.class
+org\pouchii2\integration\wallet\responses\AirtimePurchRespData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\backup\MerchantIntAuthRequest.class
 i\ogeyingbo\single\node\wallet\requests\RequestBase.class
 i\ogeyingbo\enterprise\wallet\entities\AgentSwiftWallet.class
@@ -394,6 +409,7 @@ org\pouchii2\partner\test\data\WalletTestData.class
 org\pouchii2\integration\wallet\responses\TraxnHistoryItem.class
 i\ogeyingbo\single\node\swift\wallet\core\SingleNodeServiceWorker.class
 org\pouchii2\integration\newpartner\setup\responses\PouchiiAdminResponseBase.class
+org\pouchii2\integration\wallet\responses\TrxnVerificationResponse.class
 org\pouchii2\integration\newpartner\setup\responses\MerchantCreationResponseData.class
 org\pouchii2\partner\integration\using\jsonobjects\BillerServiceCaller.class
 i\ogeyingbo\single\node\wallet\merchant\requests\base\MerchantRequestBase.class
@@ -429,6 +445,7 @@ i\ogeyingbo\single\node\wallet\requests\FetchMyAirtimeBeneficiaries.class
 org\pouchii2\partner\integration\RegistrationCallerTest.class
 i\ogeyingbo\my\common\approval\workflow\ApprovalItem.class
 i\ogeyingbo\my\common\lenders\api\requests\RequestToLenderBase.class
+org\pouchii2\integration\wallet\responses\TransactionFee.class
 i\ogeyingbo\my\common\approval\workflow\ApprovalRequest.class
 org\pouchii2\integration\newpartner\setup\requests\AdminUserLogin.class
 i\ogeyingbo\my\common\lenders\api\requests\FormData2.class
@@ -454,6 +471,7 @@ i\ogeyingbo\single\node\wallet\merchant\requests\RefreshMerchAuthToken.class
 org\pouchii2\integration\newpartner\setup\responses\UserLoginResponseData.class
 org\pouchii2\integration\merchant\requests\ProcessMerchBulkDisbursement.class
 i\ogeyingbo\my\common\lenders\api\requests\FormData1.class
+org\pouchii2\integration\wallet\responses\AccountNameEnquiryRespData.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMyProfile.class
 org\pouchii2\integration\wallet\requests\FetchElectricityProviders.class
 org\pouchii2\integration\wallet\responses\PouchiiResponseBase.class
@@ -480,6 +498,7 @@ i\ogeyingbo\my\common\lenders\api\requests\RequestBase.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchFetchMyWalletBalances.class
 i\ogeyingbo\enterprise\trxn\entities\JournalLineSummary.class
 org\pouchii2\integration\open\api\test\RegistrationTest.class
+org\pouchii2\integration\wallet\responses\AcceptOrRejectRequestMoneyResp.class
 i\ogeyingbo\my\common\lenders\api\responses\LoanDisburseNotifyResponse.class
 i\ogeyingbo\single\node\wallet\integration\newpartner\setup\requests\InitializePartnerWallet.class
 i\ogeyingbo\core\utils\Offload.class
@@ -525,6 +544,7 @@ i\ogeyingbo\my\common\loan\services\requests\LoanRepaymentStatusEnquiry.class
 i\ogeyingbo\single\node\wallet\merchant\requests\MerchantPaymentDisbursement.class
 i\ogeyingbo\single\node\wallet\requests\AirtimePurchase.class
 i\ogeyingbo\my\common\loan\services\requests\RepaymentPlan.class
+org\pouchii2\integration\wallet\responses\TrxnVerificationRespData.class
 i\ogeyingbo\core\utils\GenericDataUnit.class
 org\pouchii2\partner\test\correct\data\AuthourizationTestData.class
 org\pouchii2\integration\wallet\requests\CreateMerchCustSalaryWallet.class
