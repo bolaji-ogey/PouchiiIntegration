@@ -35,4 +35,61 @@ public class ValidatePaymentResponseData {
      
      
      
+     public  void  setTransactionAmount(BigDecimal    inTransactionAmount){
+          transactionAmount  =  inTransactionAmount;
+     }
+     
+     
+     public  void  setTransactionFeeAmount(BigDecimal    inTransactionFeeAmount){
+          transactionFeeAmount  =  inTransactionFeeAmount;
+     }
+     
+     
+     public  void  setTotalTransactionAmount(BigDecimal    inTotalTransactionAmount){
+          totalTransactionAmount  =  inTotalTransactionAmount;
+     }
+     
+     
+     public  void  setAppliedBonusAmount(BigDecimal    inAppliedBonusAmount){
+          appliedBonusAmount  =  inAppliedBonusAmount;
+     }
+     
+     public  void  setTransactionFees(ArrayList<TransactionFee>    inTransactionFees){
+          transactionFees  =  inTransactionFees;
+     }
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    public  BigDecimal  getTransactionAmount(){
+          return   transactionAmount;
+     }
+     
+     
+     public  BigDecimal  getTransactionFeeAmount(){
+          return   transactionFeeAmount;
+     }
+     
+     
+     public  BigDecimal  getTotalTransactionAmount(){
+          return   totalTransactionAmount;
+     }
+     
+     
+     public  BigDecimal  getAppliedBonusAmount(){
+          return   appliedBonusAmount;
+     }
+     
+     public  ArrayList<TransactionFee>  getTransactionFees(){
+          return   transactionFees;
+     }
+     
+     
+     
+     
 }

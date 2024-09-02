@@ -38,5 +38,68 @@ public class TrxnJournalItem {
     private  String   transactionEvent;
     
     
+    public  void  setTransactionDate(String    inTransactionDate){
+        transactionDate   =   inTransactionDate;
+    }
+    
+    public  void  setBookedBalanceAfterTransaction(String    inBookedBalanceAfterTransaction){
+        bookedBalanceAfterTransaction   =   inBookedBalanceAfterTransaction;
+    }
+    
+    public  void  setBookedBalanceBeforeTransaction(String    inBookedBalanceBeforeTransaction){
+        bookedBalanceBeforeTransaction   =   inBookedBalanceBeforeTransaction;
+    }
+    
+    public  void  setAvailableBalanceAfterTransaction(String    inAvailableBalanceAfterTransaction){
+        availableBalanceAfterTransaction   =   inAvailableBalanceAfterTransaction;
+    }
+    
+    public  void  setAvailableBalanceBeforeTransactionTransactionDate(String    inAvailableBalanceBeforeTransaction){
+        availableBalanceBeforeTransaction   =   inAvailableBalanceBeforeTransaction;
+    }
+    
+    public  void  setTransactionAmount(String    inTransactionAmount){
+        transactionAmount   =   inTransactionAmount;
+    }
+    
+    public  void  setTransactionEvent(String    inTransactionEvent){
+        transactionEvent   =   inTransactionEvent;
+    }
+    
+    
+    
+    
+    
+    
+    
+    public  String  getTransactionDate(){
+        return    transactionDate;
+    }
+    
+    public  String  getBookedBalanceAfterTransaction(){
+        return    bookedBalanceAfterTransaction;
+    }
+    
+    public  String  getBookedBalanceBeforeTransaction(){
+        return    bookedBalanceBeforeTransaction;
+    }
+    
+    public  String  getAvailableBalanceAfterTransaction(){
+        return    availableBalanceAfterTransaction;
+    }
+    
+    public  String  getAvailableBalanceBeforeTransactionTransactionDate(){
+        return    availableBalanceBeforeTransaction;
+    }
+    
+    public  String  getTransactionAmount(){
+        return    transactionAmount;
+    }
+    
+    public  String  getTransactionEvent(){
+        return    transactionEvent;
+    }
+    
+    
     
 }
